@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><title>Cali Burns — Student Profile Card</title><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;transition:background-color 0.25s ease,color 0.25s ease;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+:root{
+  color-scheme:light;
+  --color-background:#f8f9ff;
+  --color-on-background:#0b1c30;
+  --color-surface:#f8f9ff;
+  --color-surface-bright:#f8f9ff;
+  --color-surface-dim:#cbdbf5;
+  --color-surface-container-lowest:#ffffff;
+  --color-surface-container-low:#eff4ff;
+  --color-surface-container:#e5eeff;
+  --color-surface-container-high:#dce9ff;
+  --color-surface-container-highest:#d3e4fe;
+  --color-surface-variant:#d3e4fe;
+  --color-on-surface:#0b1c30;
+  --color-on-surface-variant:#45464d;
+  --color-outline:#76777d;
+  --color-outline-variant:#c6c6cd;
+  --color-primary:#000000;
+  --color-primary-container:#131b2e;
+  --color-on-primary:#ffffff;
+  --color-on-primary-container:#7c839b;
+  --color-secondary:#4b41e1;
+  --color-secondary-container:#645efb;
+  --color-secondary-fixed:#e2dfff;
+  --color-secondary-fixed-dim:#c3c0ff;
+  --color-on-secondary-fixed:#0f0069;
+  --color-tertiary-container:#002113;
+  --color-on-tertiary-container:#009668;
+  --color-tertiary-fixed-dim:#4edea3;
+  --color-on-tertiary-fixed-variant:#005236;
+  --color-inverse-surface:#213145;
+  --color-inverse-on-surface:#eaf1ff;
+  --mesh-dot:rgba(11,28,48,0.06);
+}
+html.dark{
+  color-scheme:dark;
+  --color-background:#090d16;
+  --color-on-background:#e2e8f0;
+  --color-surface:#0e1524;
+  --color-surface-bright:#1b263b;
+  --color-surface-dim:#070a10;
+  --color-surface-container-lowest:#101726;
+  --color-surface-container-low:#162034;
+  --color-surface-container:#1d2b44;
+  --color-surface-container-high:#263857;
+  --color-surface-container-highest:#2f4469;
+  --color-surface-variant:#28374f;
+  --color-on-surface:#f8fafc;
+  --color-on-surface-variant:#94a3b8;
+  --color-outline:#64748b;
+  --color-outline-variant:#334155;
+  --color-primary:#ffffff;
+  --color-primary-container:#4f46e5;
+  --color-on-primary:#ffffff;
+  --color-on-primary-container:#c7d2fe;
+  --color-secondary:#818cf8;
+  --color-secondary-container:#6366f1;
+  --color-secondary-fixed:#312e81;
+  --color-secondary-fixed-dim:#4338ca;
+  --color-on-secondary-fixed:#e0e7ff;
+  --color-tertiary-container:#064e3b;
+  --color-on-tertiary-container:#34d399;
+  --color-tertiary-fixed-dim:#34d399;
+  --color-on-tertiary-fixed-variant:#a7f3d0;
+  --color-inverse-surface:#e2e8f0;
+  --color-inverse-on-surface:#090d16;
+  --mesh-dot:rgba(255,255,255,0.08);
+}
+.bg-mesh-grid{background-image:radial-gradient(var(--mesh-dot) 1px,transparent 1px);background-size:24px 24px;}
+html.dark article{box-shadow:0 25px 50px -12px rgba(0,0,0,0.7);border:1px solid rgba(255,255,255,0.08);}
+html.dark header,html.dark footer{border-color:rgba(255,255,255,0.08);}
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-background":"var(--color-on-background)","on-error":"#ffffff","surface-container-high":"var(--color-surface-container-high)","on-secondary-container":"#fffbff","outline":"var(--color-outline)","inverse-primary":"#bec6e0","secondary-container":"var(--color-secondary-container)","primary-fixed-dim":"#bec6e0","surface-variant":"var(--color-surface-variant)","surface-container":"var(--color-surface-container)","tertiary-fixed-dim":"var(--color-tertiary-fixed-dim)","on-tertiary-fixed":"#002113","surface-tint":"#565e74","tertiary":"#000000","tertiary-fixed":"#6ffbbe","inverse-surface":"var(--color-inverse-surface)","on-primary-container":"var(--color-on-primary-container)","on-tertiary":"#ffffff","surface-container-highest":"var(--color-surface-container-highest)","on-error-container":"#93000a","secondary-fixed-dim":"var(--color-secondary-fixed-dim)","on-secondary":"#ffffff","secondary-fixed":"var(--color-secondary-fixed)","error-container":"#ffdad6","surface":"var(--color-surface)","error":"#ba1a1a","surface-bright":"var(--color-surface-bright)","on-tertiary-container":"var(--color-on-tertiary-container)","tertiary-container":"var(--color-tertiary-container)","on-primary-fixed-variant":"#3f465c","primary-container":"var(--color-primary-container)","background":"var(--color-background)","on-surface-variant":"var(--color-on-surface-variant)","on-secondary-fixed-variant":"#3323cc","on-primary":"var(--color-on-primary)","outline-variant":"var(--color-outline-variant)","surface-dim":"var(--color-surface-dim)","on-surface":"var(--color-on-surface)","secondary":"var(--color-secondary)","on-tertiary-fixed-variant":"var(--color-on-tertiary-fixed-variant)","surface-container-lowest":"var(--color-surface-container-lowest)","on-secondary-fixed":"var(--color-on-secondary-fixed)","surface-container-low":"var(--color-surface-container-low)","on-primary-fixed":"#131b2e","primary":"var(--color-primary)","primary-fixed":"#dae2fd","inverse-on-surface":"var(--color-inverse-on-surface)"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"1rem","space-2xl":"2rem","space-2xs":"0.125rem","gutter-lg":"1.5rem","space-xl":"1.5rem","space-xs":"0.25rem","margin-lg":"2rem","space-sm":"0.5rem","margin":"1rem","space-md":"0.75rem","gutter":"1rem"},"fontFamily":{"headline-xl":["Plus Jakarta Sans"],"code-sm":["JetBrains Mono"],"headline-lg":["Plus Jakarta Sans"],"body-md":["Inter"],"body-sm":["Inter"],"label-sm":["Inter"],"body-lg":["Inter"],"headline-md":["Plus Jakarta Sans"],"label-md":["Inter"]},"fontSize":{"headline-xl":["28px",{"lineHeight":"34px","letterSpacing":"-0.03em","fontWeight":"700"}],"code-sm":["11px",{"lineHeight":"16px","letterSpacing":"0","fontWeight":"500"}],"headline-lg":["22px",{"lineHeight":"28px","letterSpacing":"-0.025em","fontWeight":"600"}],"body-md":["13px",{"lineHeight":"20px","letterSpacing":"-0.005em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}]}}}}</script><script>
+(function() {
+  var savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  if (savedTheme === 'dark') {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+})();
+</script>
+</head><body class="bg-background font-body-md text-on-surface min-h-screen flex flex-col selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 max-w-7xl mx-auto px-gutter-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="Student Profile Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XKLyJIrmAb5ter-9O5JeTBK9fU9hNNZzp-meomNVb7XzvHBKmPEFOtOaP3WjJ6ffiRHx002-yXRY780BMlDQ2FWxqsnRdY97uAU_z8DNfHa0hf9zVoiRRDKgMA9pjww58EV9B9PXHtnerydDYrgcMeIE_0iDtVCixwS5gpK50OQnxsC7JiP2XIIJ3n6zj1FxCNF3r8XdKMVKTYiNU1-tfDs_pnXqgJVWGHOTEVyTGZG1R_KiFPDTZSpGU"/><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-space-2xs bg-surface-container-low rounded-full"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim ring-2 ring-tertiary-fixed/30 animate-pulse"></span><span data-i18n="headerActive" class="font-code-sm text-code-sm text-on-surface-variant uppercase tracking-wider">Portfolio v2.4 • Active Profile</span></div></div><nav class="flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-md text-label-md rounded-lg shadow-sm"><a aria-current="page" class="px-space-md py-space-xs transition-colors bg-primary-container text-on-primary font-label-md text-label-md rounded-lg shadow-sm" data-i18n="navProfile" data-path="profile" href="#">Profile</a><a class="px-space-md py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-i18n="navAchievements" data-path="achievements" href="#">Achievements</a><a class="px-space-md py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-i18n="navExperience" data-path="experience" href="#">Experience</a><a class="px-space-md py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-i18n="navConnect" data-path="connect" href="#">Connect</a></nav><div class="flex items-center gap-space-xs sm:gap-space-sm">
+<div class="hidden lg:flex items-center gap-space-xs px-space-sm py-space-2xs bg-surface-container-lowest rounded-md shadow-[0_1px_2px_rgba(15,23,42,0.04)]">
+<span class="material-symbols-outlined text-body-sm text-on-surface-variant">terminal</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">gh-pages/main</span>
+</div>
+
+<!-- Language Switcher Button -->
+<button id="lang-toggle" type="button" title="Switch Language / 切換語言" aria-label="Switch language" class="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-all duration-200 border border-outline-variant/30 text-label-md font-label-md shadow-sm active:scale-95 cursor-pointer">
+<span class="material-symbols-outlined text-[16px] text-secondary">translate</span>
+<span id="lang-label" class="font-code-sm font-semibold tracking-wide">繁體中文</span>
+</button>
+
+<!-- Dark/Light Theme Switcher Button -->
+<button id="theme-toggle" type="button" title="Toggle Dark/Light Mode / 切換深淺模式" aria-label="Toggle dark mode" class="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-all duration-200 border border-outline-variant/30 shadow-sm active:scale-95 cursor-pointer">
+<span id="theme-icon" class="material-symbols-outlined text-[18px] text-secondary">dark_mode</span>
+</button>
+
+<!-- User Avatar -->
+<div class="flex items-center ml-1">
+<img alt="Cali Burns" class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-container-lowest shadow-sm" src="./aha-aha-monkey.gif" onerror="this.src='./avatar.jpg'"/>
+</div>
+</div></div></header><main class="w-full pt-14 bg-background bg-mesh-grid flex-1 relative flex flex-col justify-center items-center py-space-2xl"><div class="flex flex-col w-full">
+<div class="w-full max-w-5xl mx-auto px-gutter sm:px-gutter-lg py-space-xl">
+<!-- Ambient Glow subtle decoration -->
+<div class="relative">
+<div class="absolute -top-12 -left-12 w-72 h-72 bg-secondary-fixed/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-12 -right-12 w-80 h-80 bg-surface-variant/40 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Main Profile Surface -->
+<article class="relative bg-surface-container-lowest rounded-2xl shadow-xl shadow-on-background/[0.04] p-space-xl md:p-space-2xl transition-all duration-300">
+<!-- Header Bar: Context & System Tag -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-lg mb-space-lg border-b border-surface-container-high/60">
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface-variant">
+<span class="inline-block w-2 h-2 rounded-full bg-on-tertiary-container"></span>
+<span data-i18n="studentId" class="tracking-wide uppercase">Guatemalan MOFA Scholarship Recipient</span>
+<span class="text-outline-variant font-normal">/</span>
+<span class="text-on-surface">SYS.PORTFOLIO.STATIC</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-space-2xs bg-surface-container-low rounded-md">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified</span>
+<span data-i18n="statusBadge" class="font-code-sm text-code-sm text-on-surface">NSYSU • MOFA Academic Achievement Award 2025</span>
+</div>
+</div>
+<!-- Two-Column Primary Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Column: Portrait, Status & Action CTAs (~38%) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Portrait Container -->
+<div class="relative group">
+<div class="relative aspect-square w-full max-w-[280px] sm:max-w-[320px] mx-auto lg:mx-0 rounded-2xl p-1.5 bg-surface-container-low shadow-sm">
+<img alt="Cali Burns headshot" class="w-full h-full object-cover rounded-xl shadow-inner transition-transform duration-500 group-hover:scale-[1.01]" src="./avatar.jpg" onerror="this.src='./aha-aha-monkey.gif'"/>
+<div class="absolute bottom-4 right-4 bg-surface-container-lowest/90 backdrop-blur-md px-space-sm py-space-2xs rounded-full shadow-sm flex items-center gap-1.5">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-on-tertiary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-on-tertiary-container"></span>
+</span>
+<span data-i18n="availability" class="font-label-sm text-label-sm text-on-surface font-semibold tracking-wider">AVAILABLE</span>
+</div>
+</div>
+</div>
+<!-- Badges Stack -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<!-- Seeking Internship Pill -->
+<div class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-low text-on-tertiary-fixed-variant rounded-lg">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">radio_button_checked</span>
+<span data-i18n="seeking" class="font-label-md text-label-md font-medium">Seeking Opportunities in Data Analytics, Financial Research, Business Analytics, and Remote Work</span>
+</div>
+<!-- Location Pill -->
+<div class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container text-on-surface-variant rounded-lg">
+<span class="material-symbols-outlined text-[16px] text-on-surface">location_on</span>
+<span data-i18n="location" class="font-label-md text-label-md">Kaohsiung, Taiwan (Open to Remote Opportunities)</span>
+</div>
+<!-- Email Verified Pill -->
+<div class="flex items-center justify-between px-space-md py-space-xs bg-surface-container text-on-surface-variant rounded-lg">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-[16px] text-on-surface">alternate_email</span>
+<span data-i18n="email" class="font-code-sm text-code-sm text-on-surface truncate">Email available upon request</span>
+</div>
+<span class="material-symbols-outlined text-[15px] text-secondary flex-shrink-0" title="Verified Identity">verified_user</span>
+</div>
+</div>
+<!-- Action CTAs -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<a class="flex items-center justify-center gap-space-xs w-full h-10 px-space-md bg-primary-container text-on-primary rounded-lg font-label-md text-label-md shadow-sm hover:opacity-90 transition-opacity" href="#resume">
+<span class="material-symbols-outlined text-[18px]">description</span>
+<span data-i18n="resume">Download Resume (PDF)</span>
+<span class="font-code-sm text-code-sm opacity-60 ml-auto">v1.0</span>
+</a>
+<div class="grid grid-cols-2 gap-space-xs">
+<a class="flex items-center justify-center gap-space-xs h-9 px-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-md text-label-md transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px] text-secondary">share</span>
+<span>LinkedIn</span>
+</a>
+<a class="flex items-center justify-center gap-space-xs h-9 px-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-md text-label-md transition-colors" href="mailto:">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+<span data-i18n="contact">Get in Touch</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Right Column: Narrative, Quote, Skills & Links (~62%) -->
+<div class="lg:col-span-7 flex flex-col justify-between gap-space-lg">
+<div class="flex flex-col gap-space-md">
+<!-- Name & Title -->
+<div>
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span data-i18n="profileCategory" class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">International Business & Data Analytics</span>
+<span class="text-outline-variant font-body-sm">•</span>
+<span data-i18n="classYear" class="font-code-sm text-code-sm text-on-surface-variant">Class of 2027</span>
+</div>
+<h1 data-i18n="name" class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+                  Cali Burns
+                </h1>
+<div class="flex items-center gap-space-xs mt-space-2xs text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">account_balance</span>
+<span data-i18n="school" class="font-medium text-on-surface">National Sun Yat-sen University (NSYSU)</span>
+<span class="text-outline-variant">•</span>
+<span data-i18n="department">International Business Administration (College of Management)</span>
+</div>
+</div>
+<!-- Two-sentence Bio -->
+<p data-i18n="bio" class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                An International Business student with a background in software engineering, passionate about combining data analytics, financial research, and business insights to transform complex data into actionable findings. Experienced in dynamic pricing analysis, financial market data analysis, and data visualization projects. Familiar with Excel, Tableau, and data processing tools, with additional experience in cross-cultural communication, English education, and international teamwork. Eager to strengthen quantitative analysis and business intelligence skills while exploring opportunities in data-driven decision-making, financial analysis, and international business.
+              </p>
+<!-- Quote / Accolade Callout -->
+<div class="relative bg-surface-container-low rounded-xl p-space-md">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px] flex-shrink-0 mt-0.5">format_quote</span>
+<div class="flex flex-col gap-space-2xs">
+<p data-i18n="quote" class="font-body-md text-body-md text-on-surface italic leading-normal">
+                      “From software engineering to international business and financial data analysis, I am driven by curiosity, evidence-based thinking, and the challenge of turning data into actionable insights.”
+                    </p>
+<span data-i18n="quoteRole" class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+                      International Business Student • Data Analytics & Financial Research
+                    </span>
+</div>
+</div>
+</div>
+<!-- Core Skill Pills -->
+<div class="flex flex-col gap-space-xs pt-space-2xs">
+<span data-i18n="competencies" class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Core Competencies</span>
+<div id="skills-container" class="flex flex-wrap gap-space-xs">
+<span class="px-space-sm py-1 bg-surface-container rounded-md font-code-sm text-code-sm text-on-surface">#DataAnalytics</span>
+<span class="px-space-sm py-1 bg-surface-container rounded-md font-code-sm text-code-sm text-on-surface">#FinancialDataAnalysis</span>
+<span class="px-space-sm py-1 bg-surface-container rounded-md font-code-sm text-code-sm text-on-surface">#BusinessIntelligence</span>
+<span class="px-space-sm py-1 bg-surface-container rounded-md font-code-sm text-code-sm text-on-surface">#ExcelAndDataProcessing</span>
+<span class="px-space-sm py-1 bg-surface-container rounded-md font-code-sm text-code-sm text-on-surface">#CrossCulturalCommunication</span>
+</div>
+</div>
+</div>
+<!-- Professional Links Grid -->
+<div class="pt-space-md">
+<span data-i18n="channels" class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-space-xs">Verified Channels</span>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs">
+<a class="flex items-center gap-space-xs p-space-sm bg-surface-container hover:bg-surface-container-high rounded-lg text-on-surface transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px] text-secondary">link</span>
+<span class="font-label-md text-label-md font-medium">LinkedIn</span>
+</a>
+<a class="flex items-center gap-space-xs p-space-sm bg-surface-container hover:bg-surface-container-high rounded-lg text-on-surface transition-colors" href="https://medium.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">article</span>
+<span class="font-label-md text-label-md font-medium">Medium</span>
+</a>
+<a class="flex items-center gap-space-xs p-space-sm bg-surface-container hover:bg-surface-container-high rounded-lg text-on-surface transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">code_blocks</span>
+<span class="font-label-md text-label-md font-medium">GitHub</span>
+</a>
+<a class="flex items-center gap-space-xs p-space-sm bg-surface-container hover:bg-surface-container-high rounded-lg text-on-surface transition-colors" href="https://alexchen.me" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">language</span>
+<span class="font-label-md text-label-md font-medium">Personal Site</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Refined Separation Section -->
+<div class="relative my-space-xl flex items-center justify-center">
+<div class="w-full border-t border-dashed border-surface-variant"></div>
+<div class="absolute px-space-md bg-surface-container-lowest font-code-sm text-code-sm text-on-surface-variant uppercase tracking-widest">
+            Verified Milestones &amp; Academic Records
+          </div>
+</div>
+<!-- Bottom Section: 4 Key Metric Cards (Bento Data Strip) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric 1 -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between transition-transform duration-200 hover:-translate-y-0.5">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-sm">
+<span data-i18n="m1Cat" class="font-label-sm text-label-sm uppercase tracking-wider">Academic Excellence</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">school</span>
+</div>
+<div>
+<div data-i18n="m1Val" class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Multiple Academic Excellence Awards</div>
+<p data-i18n="m1Desc" class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Recipient of the 2025 MOFA Academic Achievement Award for Outstanding Performance and multiple NSYSU Outstanding Student Awards.</p>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between transition-transform duration-200 hover:-translate-y-0.5">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-sm">
+<span data-i18n="m2Cat" class="font-label-sm text-label-sm uppercase tracking-wider">Data Analytics Projects</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">analytics</span>
+</div>
+<div>
+<div data-i18n="m2Val" class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">383 Hotels Analyzed</div>
+<p data-i18n="m2Desc" class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Conducted a dynamic pricing analysis of hotels in Kaohsiung during a concert period, examining the relationships between event demand, geographic distance, and hotel price premiums.</p>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between transition-transform duration-200 hover:-translate-y-0.5">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-sm">
+<span data-i18n="m3Cat" class="font-label-sm text-label-sm uppercase tracking-wider">Technology & Software Engineering</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">terminal</span>
+</div>
+<div>
+<div data-i18n="m3Val" class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Software Engineering Experience</div>
+<p data-i18n="m3Desc" class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Experience in software development, technical support, and software compliance consulting, combining technical knowledge with business-oriented problem-solving.</p>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between transition-transform duration-200 hover:-translate-y-0.5">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-sm">
+<span data-i18n="m4Cat" class="font-label-sm text-label-sm uppercase tracking-wider">International Engagement & Leadership</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">public</span>
+</div>
+<div>
+<div data-i18n="m4Val" class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Cross-Cultural Education & Community Service</div>
+<p data-i18n="m4Desc" class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Served as an English discussion leader and English teacher, with experience in cross-cultural service-learning initiatives and international team collaboration.</p>
+</div>
+</div>
+</div>
+<!-- Terminal Status Metadata Footer -->
+<div class="mt-space-lg pt-space-md border-t border-surface-container-high/40 flex flex-wrap items-center justify-between gap-space-sm text-on-surface-variant font-code-sm text-code-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Compiled via GitHub Pages Action #142</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span>Encoding: UTF-8</span>
+<span>Static Profile Buffer: OK</span>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_8px_rgba(0,0,0,0.02)] py-space-md"><div class="max-w-7xl mx-auto px-gutter-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm text-on-surface-variant font-label-sm text-label-sm"><span class="flex h-2 w-2 rounded-full bg-tertiary-fixed-dim"></span><span data-i18n="footerProd">Production Deployment • Verified GitHub Identity</span></div><div class="font-code-sm text-code-sm text-on-surface-variant flex items-center gap-space-xs"><span class="material-symbols-outlined text-body-sm">code</span><span>Engineered with Precision &amp; Intent</span></div></div></footer><script>
+(function() {
+  const i18n = {
+    en: {
+      pageTitle: "Cali Burns — Student Profile Card",
+      navProfile: "Profile",
+      navAchievements: "Achievements",
+      navExperience: "Experience",
+      navConnect: "Connect",
+      headerActive: "Portfolio v2.4 • Active Profile",
+      studentId: "Guatemalan MOFA Scholarship Recipient",
+      statusBadge: "NSYSU • MOFA Academic Achievement Award 2025",
+      availability: "AVAILABLE",
+      seeking: "Seeking Opportunities in Data Analytics, Financial Research, Business Analytics, and Remote Work",
+      location: "Kaohsiung, Taiwan (Open to Remote Opportunities)",
+      email: "Email available upon request",
+      resume: "Download Resume (PDF)",
+      contact: "Get in Touch",
+      profileCategory: "International Business & Data Analytics",
+      classYear: "Class of 2027",
+      name: "Cali Burns",
+      school: "National Sun Yat-sen University (NSYSU)",
+      department: "International Business Administration (College of Management)",
+      bio: "An International Business student with a background in software engineering, passionate about combining data analytics, financial research, and business insights to transform complex data into actionable findings. Experienced in dynamic pricing analysis, financial market data analysis, and data visualization projects. Familiar with Excel, Tableau, and data processing tools, with additional experience in cross-cultural communication, English education, and international teamwork. Eager to strengthen quantitative analysis and business intelligence skills while exploring opportunities in data-driven decision-making, financial analysis, and international business.",
+      quote: "“From software engineering to international business and financial data analysis, I am driven by curiosity, evidence-based thinking, and the challenge of turning data into actionable insights.”",
+      quoteRole: "International Business Student • Data Analytics & Financial Research",
+      competencies: "Core Competencies",
+      skills: ["#DataAnalytics", "#FinancialDataAnalysis", "#BusinessIntelligence", "#ExcelAndDataProcessing", "#CrossCulturalCommunication"],
+      channels: "Verified Channels",
+      milestones: "Verified Milestones & Academic Records",
+      m1Cat: "Academic Excellence",
+      m1Val: "Multiple Academic Excellence Awards",
+      m1Desc: "Recipient of the 2025 MOFA Academic Achievement Award for Outstanding Performance and multiple NSYSU Outstanding Student Awards.",
+      m2Cat: "Data Analytics Projects",
+      m2Val: "383 Hotels Analyzed",
+      m2Desc: "Conducted a dynamic pricing analysis of hotels in Kaohsiung during a concert period, examining the relationships between event demand, geographic distance, and hotel price premiums.",
+      m3Cat: "Technology & Software Engineering",
+      m3Val: "Software Engineering Experience",
+      m3Desc: "Experience in software development, technical support, and software compliance consulting, combining technical knowledge with business-oriented problem-solving.",
+      m4Cat: "International Engagement & Leadership",
+      m4Val: "Cross-Cultural Education & Community Service",
+      m4Desc: "Served as an English discussion leader and English teacher, with experience in cross-cultural service-learning initiatives and international team collaboration.",
+      footerProd: "Production Deployment • Verified GitHub Identity",
+      footerEngineered: "Engineered with Precision & Intent",
+      langBtnLabel: "繁體中文"
+    },
+    zh: {
+      pageTitle: "Cali Burns (呂雅思) — 個人數位名片",
+      navProfile: "個人檔案",
+      navAchievements: "重要成就",
+      navExperience: "專案經歷",
+      navConnect: "聯絡交流",
+      headerActive: "個人履歷 v2.4 • 現正展示",
+      studentId: "中華民國外交部臺灣獎學金受獎生",
+      statusBadge: "NSYSU • 2025 外交部學業優異獎",
+      availability: "可洽談合作",
+      seeking: "尋求數據分析、金融研究、商業分析及遠端工作機會 (Seeking Data Analytics, Financial Research, Business Analytics & Remote Opportunities)",
+      location: "台灣 高雄 (可遠端工作 • Open to Remote Opportunities)",
+      email: "電子郵件可依需求提供",
+      resume: "下載完整履歷 (PDF)",
+      contact: "聯絡我",
+      profileCategory: "國際商務與數據分析 (International Business & Data Analytics)",
+      classYear: "2027 級 (Class of 2027)",
+      name: "Cali Burns (呂雅思)",
+      school: "國立中山大學 (National Sun Yat-sen University)",
+      department: "國際經營管理學系 (管理學院)",
+      bio: "具備國際商管教育背景與軟體工程實務經驗，致力於結合數據分析、金融研究與商業洞察，將複雜的數據轉化為具決策價值的分析成果。曾參與動態定價、金融市場數據分析與資料視覺化專案，熟悉 Excel、Tableau 及數據處理工具，並具備跨文化溝通、英語教學與國際團隊合作經驗。期望持續深化量化分析與商業智慧技能，探索數據驅動決策、金融分析及國際商業領域的發展機會。",
+      quote: "“從軟體工程跨入國際商務與金融數據分析，我始終以好奇心、實證思維為動力，樂於將複雜數據轉化為具體的決策洞察。”",
+      quoteRole: "國際商務與數據分析 • 金融研究",
+      competencies: "核心專業能力",
+      skills: ["#數據分析", "#金融數據分析", "#商業智慧與資料視覺化", "#Excel與數據處理", "#跨文化溝通"],
+      channels: "官方聯絡管道",
+      milestones: "獲獎紀錄與重要專案里程碑",
+      m1Cat: "學術卓越 (Academics)",
+      m1Val: "多項學業優異獎項",
+      m1Desc: "獲頒 2025 年外交部學業優異獎，並多次榮獲國立中山大學優秀學生獎。",
+      m2Cat: "數據分析專案 (Data Analytics)",
+      m2Val: "383 間飯店樣本分析",
+      m2Desc: "針對高雄大型演唱會期間飯店動態定價進行實證分析，探討活動需求、地理距離與房價溢價關係。",
+      m3Cat: "軟體與科技經驗 (Technology)",
+      m3Val: "軟體工程實務經驗",
+      m3Desc: "具備軟體開發、技術支援及軟體合規顧問實務經驗，能無縫結合技術理解與商業需求。",
+      m4Cat: "跨文化交流與領導 (Leadership & Service)",
+      m4Val: "國際教育與社會服務",
+      m4Desc: "曾擔任英語研討帶領者與英語教師，具備跨文化服務學習推動與國際團隊協作經驗。",
+      footerProd: "正式部署版本 • 官方驗證身分",
+      footerEngineered: "精準打造 • 專業呈現",
+      langBtnLabel: "English"
+    }
+  };
+
+  let currentLang = localStorage.getItem('lang') || 'en';
+  let currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+  function applyTheme(theme) {
+    currentTheme = theme;
+    localStorage.setItem('theme', theme);
+    const root = document.documentElement;
+    const themeIcon = document.getElementById('theme-icon');
+    if (theme === 'dark') {
+      root.classList.add('dark');
+      if (themeIcon) themeIcon.textContent = 'light_mode';
+    } else {
+      root.classList.remove('dark');
+      if (themeIcon) themeIcon.textContent = 'dark_mode';
+    }
+  }
+
+  function applyLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('lang', lang);
+    const data = i18n[lang];
+    if (!data) return;
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (data[key] !== undefined) {
+        el.textContent = data[key];
+      }
+    });
+
+    const skillsContainer = document.getElementById('skills-container');
+    if (skillsContainer && data.skills) {
+      skillsContainer.innerHTML = data.skills.map(skill => 
+        '<span class="px-space-sm py-1 bg-surface-container rounded-md font-code-sm text-code-sm text-on-surface">' + skill + '</span>'
+      ).join('\n');
+    }
+
+    const langLabel = document.getElementById('lang-label');
+    if (langLabel) {
+      langLabel.textContent = data.langBtnLabel;
+    }
+
+    if (data.pageTitle) {
+      document.title = data.pageTitle;
+    }
+
+    document.documentElement.lang = lang === 'zh' ? 'zh-TW' : 'en';
+  }
+
+  // Initialize
+  document.addEventListener('DOMContentLoaded', function() {
+    applyTheme(currentTheme);
+    applyLanguage(currentLang);
+
+    const themeBtn = document.getElementById('theme-toggle');
+    if (themeBtn) {
+      themeBtn.addEventListener('click', function() {
+        applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+      });
+    }
+
+    const langBtn = document.getElementById('lang-toggle');
+    if (langBtn) {
+      langBtn.addEventListener('click', function() {
+        applyLanguage(currentLang === 'en' ? 'zh' : 'en');
+      });
+    }
+  });
+
+  // Run immediately for instant theme render
+  applyTheme(currentTheme);
+})();
+</script>
+</body></html>
